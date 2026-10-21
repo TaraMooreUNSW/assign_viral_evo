@@ -24,8 +24,8 @@ def jukes_cantor(reference_sequence: str, distant_sequence: str) -> float:
         For example 1.163.
 
     """
-    # ignore sites with indels
-    valid_pairs = [(a, b) for a, b in zip(reference_sequence, distant_sequence) if a != "-" and b != "-"]
+    # ignore sites with indels and Ns
+    valid_pairs = [(a, b) for a, b in zip(reference_sequence, distant_sequence) if a != "-" and b != "-" and a != 'N' and b != 'N']
 
     ham_dist = sum(a != b for a, b in valid_pairs )
     no_valid_sites = len(valid_pairs)
