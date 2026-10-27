@@ -1,4 +1,3 @@
-# from Bio import
 import math
 
 NO_DEC_PLACES = 3
@@ -65,10 +64,3 @@ def kimura_two_parameter(reference_sequence: str, distant_sequence: str) -> floa
 
     """
     raise NotImplementedError()
-
-if __name__ == "__main__":
-    # (e.g. AGGT-GA)
-    # distant_sequence: str
-    #     A string of nucleotides in a sequence after the alignment
-    #     with a reference (e.g. AGC-AGA)
-    print(jukes_cantor("AGGT-GA", "AGC-AGA"))
